@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px by upper method*/
+    /* --for transition -- */
+    overflow-x: hidden;
+}
+
+body {
+    /* --for transition -- */
+    overflow: hidden;
+}
+
+.header {
+    padding: 0 4.8rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.header .logo {
+    height: 5rem;
+    background-color: rgba(2, 2, 2, 0.99);
+    border-radius: 30px 100px;
+    padding: 1.2px;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 4.2rem;
+    list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #212529;
+    transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: rgb(252, 12, 44);
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.mobile-navbar-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #212529;
+}
+
+.mobile-navbar-icon[name="close-outline"] {
+    display: none;
+}
+
+
+/* nav bar end  */
+
+
+/* ------Post - section-------- */
+
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans&display=swap');
+ :root {
+    --bg-size: 100% 100%;
+    --main_color: #fff;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color: #bbe1fa;
+    --btn-font: 1.5rem;
+}
+
+* {
+    font-family: var(--font-para);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.notes {
+    font-size: large;
+}
+
+p,
+label,
+input::placeholder {
+    font-size: 1.9rem;
+    line-height: 170%;
+    color: #6c757d;
+}
+
+figure img,
+.fab,
+.fas {
+    transition: var(--eff);
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background: hsl(84, 3%, 94%);
+}
+
+span {
+    font-weight: 700;
+    color: black;
+}
+
+.main_header__div {
+    height: calc(100vh- 40vh);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0)50%, rgba(0, 0, 0, 0)), url(https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80);
+    background-size: var(--bg-size);
+}
+
+.main_header__div p {
+    font-weight: 900;
+    font-size: 3.5rem;
+    font-family: var(--title);
+    color: var(--main_color);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+.main_header__div h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: var(--title);
+    color: var(--main_color);
+    position: relative;
+    padding-bottom: 5rem;
+    transition: var(--eff);
+}
+
+
+/* error found that why I is separate use for class */
+
+.I {
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: var(--title);
+    color: var(--main_color);
+    position: relative;
+    padding-bottom: 2rem;
+    transition: var(--eff);
+}
+
+.main_header__div span {
+    font-family: var(--title);
+}
+
+
+/* for the flip style  */
+
+.animateWord div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 10rem;
+    /*  for we use 100px for showing the list */
+    padding: -1rem;
+    margin-bottom: 1.8rem;
+}
+
+.animateWord div li {
+    font-weight: 500;
+    padding: 0 1rem;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: block;
+    font-family: var(--title);
+}
+
+
+/* Hint for transition A Cubic Bezier curve is defined by four points РО, P1, P2, and РЗ. PO and P3 are the start and the end of the curve and,
+in CSS these points are fixed as the coordinates are ratios. PO is (О, 0) and represents the initial time and the initial state,
+P3 is (1, 1) and represents the final time and the final state. Trebocial
+The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property.
+ */
+
+.flip {
+    -webkit-animation: flip 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    animation: flip 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip {
+    0% {
+        margin-top: -360px;
+    }
+    5% {
+        margin-top: -270px;
+    }
+    25% {
+        margin-top: -270px;
+    }
+    30% {
+        margin-top: -180px;
+    }
+    50% {
+        margin-top: -180px;
+    }
+    55% {
+        margin-top: -90px;
+    }
+    75% {
+        margin-top: -90px;
+    }
+    80% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes flip {
+    0% {
+        margin-top: -360px;
+    }
+    5% {
+        margin-top: -270px;
+    }
+    25% {
+        margin-top: -270px;
+    }
+    30% {
+        margin-top: -180px;
+    }
+    50% {
+        margin-top: -180px;
+    }
+    55% {
+        margin-top: -90px;
+    }
+    75% {
+        margin-top: -90px;
+    }
+    80% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+.button {
+    color: var(--btn-font-color);
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    border-radius: 1rem;
+}
+
+.button:hover,
+figure img:hover,
+.left_div__reply:hover,
+.left_div__like:hover,
+.subs_btn:hover {
+    transform: translateY(-0.2rem);
+    transition: 0.25s;
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.7);
+}
+
+.blog_left__div h1 {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.blog_left__div .blog_title {
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+
+.blog_left__div .blog_title span {
+    color: #1b262c;
+}
+
+.blog_left__div p span {
+    color: #1b262c;
+}
+
+.left_dev_btns {
+    margin-top: 3rem;
+    transition: var(--eff);
+}
+
+.left_div__like {
+    color: var(--btn-font-color);
+    border-width: .2rem;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .2rem .5rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    border-radius: .5rem;
+}
+
+.left_div__reply {
+    color: var(--btn-font-color);
+    border-width: .2rem;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .2rem .5rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+    border-radius: .5rem;
+}
+
+.replies {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    transition: var(--eff);
+    display: none;
+}
+
+.reply_pic {
+    height: 4rem;
+}
+
+.tws {
+    height: 2rem;
+    display: inline-flexbox;
+}
+
+
+/* to show reply by js */
+
+.riyaz_show {
+    margin: 20px 0;
+    transition: var(--eff);
+    display: block;
+}
+
+
+/* right side style div  start*/
+
+
+/* .right_side_name {
+    font-weight: 500;
+} */
+
+.about_me_div {
+    width: auto;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(208, 206, 207, 0.8) 50%), url('/Image/Riyazpic.jpg');
+    background-size: var(--bg-size);
+}
+
+.about_me_div .my_name {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-bottom: 0rem;
+    color: rgb(0, 0, 0);
+}
+
+.about_me_div p {
+    font-size: 1.8rem;
+    color: #000;
+    padding-bottom: 0;
+}
+
+.right_div__title {
+    background: #d0cecf;
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.7);
+}
+
+.right_div__title h2 {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+}
+
+.popular_post__img1 {
+    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT12cP23udqvCqHW_2oAvK257g3oVQkv23tOumxtpfFOhHi8a5B);
+    background-size: var(--bg-size);
+}
+
+.popular_post__img2 {
+    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS1rDH_nWadT1GXFPomdutqV1PUMA8uXIWS2Js5_fq4pJ1lwG16);
+    background-size: var(--bg-size);
+}
+
+.popular_post__img3 {
+    background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVvdf3mtAr8BQaBqwu2wAFbJD1dH6jtmyAK7hZRRnbFc0yc_pT);
+    background-size: var(--bg-size);
+}
+
+.popular_post__img4 {
+    background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU2JRbbl3LBOm_an3eI5iplFhOoLESyBwUfmWDO49BS1EYuGUE);
+    background-size: var(--bg-size);
+}
+
+.right_sub__div {
+    background: #fff;
+    padding: 2.5rem 1rem;
+}
+
+.right_sub__div .row {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.right_sub__div .row:last-child {
+    margin-bottom: 0;
+}
+
+.row .right_div_post {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tags_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 8rem));
+    grid-gap: .5rem;
+}
+
+.tags_main a {
+    font-size: 1.7rem;
+    line-height: 170%;
+    font-weight: lighter;
+    background-color: #6c757d;
+    transition: var(--eff);
+}
+
+.tags_main a:hover {
+    color: var(--btn-font-color);
+    background-color: var(--btn-color);
+}
+
+
+/* advertise */
+
+.advertise_img {
+    min-width: 10rem;
+    height: 20rem;
+    display: grid;
+    place-items: center;
+}
+
+
+/* left side icon insta, */
+
+.fa-brands {
+    color: #000;
+}
+
+.fa-brands:hover {
+    color: #fa0909;
+    transition: 0.8s;
+    transform: rotate(360deg);
+}
+
+
+/*right Subscribe  style*/
+
+.right_sub__div #exampleInputEmail1 {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.subs_btn {
+    color: #000;
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    display: block;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+}
+
+footer p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* content summry is here we write  css   */
+
+.lists {
+    font-size: large;
+    color: #6c757d;
+}
+
+
+/* content summry is here we write css  */
+
+
+/* responsive code start  */
+
+
+/*responsive code start*/
+
+
+/*
+@media(max-width:998px) {
+    html {
+        font-size: 60%;
+    }
+    .left_div_blog {
+        margin: 3rem 0;
+    }
+    p,
+    label,
+    input::placeholder {
+        font-size: 2.2rem;
+    }
+     :root {
+        --btn-font: 2rem;
+    }
+    .main_header h2 {
+        font-size: 4.5rem;
+    }
+}*/
+
+@media(max-width:993px) {
+    .left_div_blog {
+        margin: 4rem 0;
+    }
+}
+
+
+/* ----------Resposive-- nav- codes------ */
+
+.header {
+    position: relative;
+    /* for position absolute in navbar*/
+}
+
+@media (max-width:780px) {
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+        border: 2px solid #212529;
+        border-radius: 5px;
+    }
+    .navbar {
+        /* display: none; */
+        width: 100%;
+        height: 65vh;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* to get the transition from right */
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .navbar {
+        transform: translateX(0);
+        opacity: 100;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    /* hide background  */
+    /* hide background  */
+    /* ---btn working--- */
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="close-outline"] {
+        display: block;
+    }
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="menu-outline"] {
+        display: none;
+    }
+}
+
+
+/* nav bar responsive end */
